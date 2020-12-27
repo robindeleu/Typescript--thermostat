@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@robin_deleu/home-automation</title>
+	<meta name="description" content="Documentation for @robin_deleu/home-automation">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@robin_deleu/home-automation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@robin_deleu/home-automation</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#home-automation-by-robin-deleu" id="home-automation-by-robin-deleu" style="color: inherit; text-decoration: none;">
+					<h1>Home Automation by Robin Deleu</h1>
+				</a>
+				<p><a href="https://www.npmjs.com/package/@robin_deleu/home-automation"><img src="https://img.shields.io/npm/v/@robin_deleu/home-automation.svg" alt="NPM Version"></a></p>
+				<p><img src="https://img.shields.io/badge/Robin-home_automatisation-red.svg" alt="badge"></p>
+				<p><img src="../../workflows/ESLint/badge.svg?branch=master" alt="ESLint"></p>
+				<p><img src="https://github.com/vives-software-engineering-2020/home-automation-robindeleu/workflows/Markdown%20Linter/badge.svg?branch=master" alt="Markdown Linter"></p>
+				<p><img src="https://github.com/vives-software-engineering-2020/home-automation-robindeleu/workflows/Tests/badge.svg?branch=master" alt="Tests"></p>
+				<p>This program acts as a thermostat. When you give input the program decide to cool or heat.</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h3>Prerequisites</h3>
+				</a>
+				<p>You will need to instal node.js and ts-node to be able to run this program.</p>
+				<p>Instal node.js:</p>
+				<pre><code class="language-bash">cinst nodejs.install</code></pre>
+				<p>Instal ts-node</p>
+				<pre><code class="language-bash">npm install -g ts-node</code></pre>
+				<p>Or you can just use the npm library like this:</p>
+				<pre><code class="language-bash">npm i @robin_deleu/home-automation</code></pre>
+				<a href="#using-the-program" id="using-the-program" style="color: inherit; text-decoration: none;">
+					<h3>Using the program</h3>
+				</a>
+				<p>First you need to edit the const in the jsontemperatuur.ts the range you want and in wich unit you work.
+				The t will be automaticly assigned by the HttpTemperature class.</p>
+				<p>Possible units are Celcius: C, Farenheid: F and Kelvin: K</p>
+				<p>Example:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">let</span> t = AUTOMATICLY ASSIGNED
+<span class="hljs-keyword">let</span> r = <span class="hljs-number">2</span>
+<span class="hljs-keyword">let</span> u = <span class="hljs-string">"C"</span>
+<span class="hljs-keyword">let</span> to = <span class="hljs-number">50</span></code></pre>
+				<p>t stands for the temperature it is right now.
+					r stands for the range you don&#39;t want that cooling or heating will work.
+					u is the unit from the temperatures you want&#39;s to insert.
+				to stands for the temperature you want</p>
+				<p>The unit from the wanted temperature is always the same unit like the one you inserted in the jsontemperatuur.ts.</p>
+				<p>For running the program you will need to run this command:</p>
+				<pre><code class="language-bash">ts-node .\index.ts</code></pre>
+				<a href="#examples-of-code-output" id="examples-of-code-output" style="color: inherit; text-decoration: none;">
+					<h2>Examples of code output</h2>
+				</a>
+				<p>settings:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">let</span> t = <span class="hljs-number">28</span> (automaticly assigned)
+<span class="hljs-keyword">let</span> r = <span class="hljs-number">2</span>
+<span class="hljs-keyword">let</span> u = <span class="hljs-string">"C"</span>
+<span class="hljs-keyword">let</span> to = <span class="hljs-number">50</span></code></pre>
+				<p>output:</p>
+				<pre><code class="language-bash">{<span class="hljs-string">"cooling"</span>:<span class="hljs-string">"false"</span>,<span class="hljs-string">"heating"</span>:<span class="hljs-string">"true"</span>}
+je werkt <span class="hljs-keyword">in</span> Celcius</code></pre>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
+				<p><a href="https://vives-software-engineering-2020.github.io/home-automation-robindeleu/">Link to extra documentation</a></p>
+				<a href="#authors" id="authors" style="color: inherit; text-decoration: none;">
+					<h2>Authors</h2>
+				</a>
+				<ul>
+					<li><strong>Robin Deleu</strong> - <em>Student VIVES University of Applied Sciences</em></li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>This project is licensed under the GNU Affero General Public License v3.0 License - see the <a href="LICENSE.md">LICENSE.md</a> file for details</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_httptemperature_.html">&quot;<wbr>Http<wbr>Temperature&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_app_.html">&quot;app&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_dataprocessing_.html">&quot;dataprocessing&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_jsontemperatuur_.html">&quot;jsontemperatuur&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_temperature_.html">&quot;temperature&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_thermostat_.html">&quot;thermostat&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_unitconverter_.html">&quot;unitconverter&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

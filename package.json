@@ -1,0 +1,42 @@
+{
+  "name": "@robin_deleu/home-automation",
+  "version": "0.8.0",
+  "description": "home-automation",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --coverage --watchAll",
+    "coverage": "jest --coverage",
+    "lint": "eslint ./src --ext .ts",
+    "docs": "typedoc && npm run nojekyll",
+    "nojekyll": "nodetouch docs/.nojekyll",
+    "prepublish": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vives-software-engineering-2020/home-automation-robindeleu.git"
+  },
+  "keywords": [
+    "thermostat"
+  ],
+  "author": "robin_deleu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vives-software-engineering-2020/home-automation-robindeleu/issues"
+  },
+  "homepage": "https://github.com/vives-software-engineering-2020/home-automation-robindeleu#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "jest": "^26.0.1",
+    "touch": "^3.1.0",
+    "ts-jest": "^25.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "typedoc": "^0.17.4",
+    "typescript": "^3.8.3"
+  }
+}
